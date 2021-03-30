@@ -9,23 +9,23 @@ export default function OnboardingScreen({ navigation }) {
             onDone={() => navigation.navigate('Login')}
             pages={[
                 {
-                    backgroundColor: '#fff',
-                    image: <Image source={require('../assets/onboarding-img1.png')} />,
+                    backgroundColor: '#a6e4d0',
+                    image: <Image source={require('../assets/dog.png')} style={{ width: 200, height: 200 }} />,
                     title: 'Pet App',
                     subtitle: 'Türkiyenin en iyi hayvan sahiplenme platformu!',
                 },
                 {
-                    backgroundColor: '#fff',
-                    image: <Image source={require('../assets/onboarding-img2.png')} />,
+                    backgroundColor: '#fdeb93',
+                    image: <Image source={require('../assets/cat.png')} style={{ width: 200, height: 200 }} />,
                     title: 'Pet App',
                     subtitle: 'Ücretsiz erişim!',
-                },
-                {
-                    backgroundColor: '#fff',
-                    image: <Image source={require('../assets/onboarding-img3.png')} />,
-                    title: 'Pet App',
-                    subtitle: 'Hayvan sahiplenin!',
-                },
+                }
+                // {
+                //     backgroundColor: '#fff',
+                //     image: <Image source={require('../assets/pet-friendly.png')} style={{ width: 200, height: 200 }} />,
+                //     title: 'Pet App',
+                //     subtitle: 'Hayvan sahiplenin!',
+                // },
 
             ]}
         />
