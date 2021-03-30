@@ -20,13 +20,6 @@ export default function OnboardingScreen({ navigation }) {
                     title: 'Pet App',
                     subtitle: 'Ücretsiz erişim!',
                 }
-                // {
-                //     backgroundColor: '#fff',
-                //     image: <Image source={require('../assets/pet-friendly.png')} style={{ width: 200, height: 200 }} />,
-                //     title: 'Pet App',
-                //     subtitle: 'Hayvan sahiplenin!',
-                // },
-
             ]}
         />
     )
