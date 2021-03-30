@@ -11,20 +11,20 @@ export default function OnboardingScreen({ navigation }) {
                 {
                     backgroundColor: '#fff',
                     image: <Image source={require('../assets/onboarding-img1.png')} />,
-                    title: 'Onboarding',
-                    subtitle: 'Done with React Native Onboarding Swiper',
+                    title: 'Pet App',
+                    subtitle: 'Türkiyenin en iyi hayvan sahiplenme platformu!',
                 },
                 {
                     backgroundColor: '#fff',
                     image: <Image source={require('../assets/onboarding-img2.png')} />,
-                    title: 'Onboarding 2',
-                    subtitle: 'Done with React Native Onboarding Swipe2',
+                    title: 'Pet App',
+                    subtitle: 'Ücretsiz erişim!',
                 },
                 {
                     backgroundColor: '#fff',
                     image: <Image source={require('../assets/onboarding-img3.png')} />,
-                    title: 'Onboarding 2',
-                    subtitle: 'Done with React Native Onboarding Swiper3',
+                    title: 'Pet App',
+                    subtitle: 'Hayvan sahiplenin!',
                 },
 
             ]}
