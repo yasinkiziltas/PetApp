@@ -11,13 +11,13 @@ export default function OnboardingScreen({ navigation }) {
                 {
                     backgroundColor: '#a6e4d0',
                     image: <Image source={require('../assets/dog.png')} style={{ width: 200, height: 200 }} />,
-                    title: 'Pet App',
+                    title: 'Can dostlarımız!',
                     subtitle: 'Türkiyenin en iyi hayvan sahiplenme platformu!',
                 },
                 {
                     backgroundColor: '#fdeb93',
                     image: <Image source={require('../assets/cat.png')} style={{ width: 200, height: 200 }} />,
-                    title: 'Pet App',
+                    title: 'Minik kalpler!',
                     subtitle: 'Ücretsiz erişim!',
                 }
             ]}

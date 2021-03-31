@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react-native'
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import FormInput from '../components/FormInput'
 import FormButton from '../components/FormButton'
 

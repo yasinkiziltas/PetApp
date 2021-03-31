@@ -12,10 +12,6 @@ export default function SignupScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            {/* <Image
-                style={styles.logo}
-                source={require('../assets/logo.png')}
-            /> */}
             <Text style={styles.text}>Hesap Oluştur</Text>
 
             <FormInput
