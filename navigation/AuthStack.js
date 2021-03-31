@@ -33,7 +33,7 @@ export default function AuthStack() {
         routeName = 'Onboarding'
     }
     else {
-        routeName = 'Splash'
+        routeName = 'Onboarding'
     }
 
 

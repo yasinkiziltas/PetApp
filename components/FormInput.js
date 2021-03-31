@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
         height: windowHeight / 15,
         borderColor: '#ccc',
         borderRadius: 3,
-        borderWidth: 1,
+        // borderWidth: 1,
+        borderBottomWidth: 1,
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#fff',
@@ -41,7 +42,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRightColor: '#ccc',
-        borderRightWidth: 1,
         width: 50,
     },
     input: {

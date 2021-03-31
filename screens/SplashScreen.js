@@ -21,7 +21,7 @@ export default function SplashScreen({ navigation }) {
                 animation="slideInLeft"
             >
                 <Text style={styles.title}>Hayvan sahiplenmenin en kolay yolu!</Text>
-                <Text style={styles.text}>Giriş yapın</Text>
+                {/* <Text style={styles.text}>Giriş yapın</Text> */}
 
                 <View style={styles.button}>
                     <TouchableOpacity onPress={() => navigation.navigate('Login')}>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         height: 40,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 50,
+        borderRadius: 20,
         flexDirection: 'row'
     },
     textSign: {
