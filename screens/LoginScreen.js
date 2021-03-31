@@ -9,10 +9,10 @@ export default function LoginScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Image
+            {/* <Image
                 style={styles.logo}
                 source={require('../assets/logo.png')}
-            />
+            /> */}
             {/* <Text style={styles.text}>Pet App</Text> */}
 
             <FormInput
@@ -58,6 +58,7 @@ export default function LoginScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         // backgroundColor: "black",
         justifyContent: 'center',
         alignItems: 'center',

@@ -3,10 +3,11 @@ import { StyleSheet } from 'react-native';
 import OnboardingScreen from '../screens/OnboardingScreen'
 import LoginScreen from '../screens/LoginScreen'
 import SignupScreen from '../screens/SignupScreen'
-import HomeScreen from '../screens/HomeScreen'
+import SplashScreen from '../screens/SplashScreen';
 
 import { createStackNavigator } from '@react-navigation/stack'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+
 
 const AppStack = createStackNavigator();
 
@@ -32,7 +33,7 @@ export default function AuthStack() {
         routeName = 'Onboarding'
     }
     else {
-        routeName = 'Login'
+        routeName = 'Splash'
     }
 
 
@@ -41,7 +42,7 @@ export default function AuthStack() {
             <AppStack.Screen name="Onboarding" component={OnboardingScreen} options={{ header: () => null }} />
             <AppStack.Screen name="Login" component={LoginScreen} options={{ header: () => null }} />
             <AppStack.Screen name="Signup" component={SignupScreen} options={{ header: () => null }} />
-            <AppStack.Screen name="Home" component={HomeScreen} options={{ header: () => null }} />
+            <AppStack.Screen name="Splash" component={SplashScreen} options={{ header: () => null }} />
         </AppStack.Navigator>
     );
 }
