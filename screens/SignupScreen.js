@@ -4,17 +4,19 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FormInput from '../components/FormInput'
 import FormButton from '../components/FormButton'
 
-export default function LoginScreen({ navigation }) {
+
+
+export default function SignupScreen({ navigation }) {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
     return (
         <View style={styles.container}>
-            <Image
+            {/* <Image
                 style={styles.logo}
                 source={require('../assets/logo.png')}
-            />
-            {/* <Text style={styles.text}>Pet App</Text> */}
+            /> */}
+            <Text style={styles.text}>Hesap Oluştur</Text>
 
             <FormInput
                 labelValue={email}
@@ -34,23 +36,34 @@ export default function LoginScreen({ navigation }) {
             />
 
             <FormButton
-                buttonTitle="Giriş"
+                buttonTitle="Kayıt Ol"
                 onPress={() => { }}
             />
 
-            <TouchableOpacity style={styles.forgotButton} onPress={() => navigation.navigate('Signup')}>
-                <Text style={styles.navButtonText}>Üye Ol</Text>
+            <TouchableOpacity style={styles.forgotButton} onPress={() => navigation.goBack()}>
+                <Text style={styles.navButtonText}>Geri Dön</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.forgotButton} onPress={() => { }}>
-                <Text style={styles.navButtonText}>Şifremi unuttum</Text>
-            </TouchableOpacity>
+            <View style={styles.textPrivate}>
+                <Text style={styles.color_textPrivate}>
+                    Kaydolarak, bizim{' '}
+                </Text>
+                <TouchableOpacity onPress={() => alert('Terms Clicked!')}>
+                    <Text style={[styles.color_textPrivate, { color: '#e88832' }]}>
+                        Kullanım Şartları
+                </Text>
+                </TouchableOpacity>
+                <Text style={styles.color_textPrivate}> ve </Text>
+                <Text style={[styles.color_textPrivate, { color: '#e88832' }]}>
+                    Gizlilik Sözleşmesi
+                 </Text>
+                <Text style={styles.color_textPrivate}>
+                    kabul etmiş olursunuz.
+                </Text>
 
 
 
-            <TouchableOpacity style={styles.forgotButton} onPress={() => navigation.navigate('Home')}>
-                <Text style={styles.navButtonText}>Üye olmadan devam et</Text>
-            </TouchableOpacity>
+            </View>
 
         </View>
     )
@@ -59,17 +72,11 @@ export default function LoginScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        // backgroundColor: "black",
+        backgroundColor: '#f9fafd',
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 20,
-        paddingTop: 90
-    },
-    logo: {
-        height: 150,
-        width: 150,
-        marginBottom: 15,
-        resizeMode: 'cover',
     },
     text: {
         // fontFamily: 'Kufam-SemiBoldItalic',
@@ -80,13 +87,25 @@ const styles = StyleSheet.create({
     navButton: {
         marginTop: 15,
     },
-    forgotButton: {
-        marginVertical: 15,
-    },
     navButtonText: {
         fontSize: 18,
         fontWeight: '500',
         color: '#2e64e5',
-        // fontFamily:,
+        // fontFamily: 'Lato-Regular',
+    },
+    forgotButton: {
+        marginVertical: 15,
+    },
+    textPrivate: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        marginVertical: 35,
+        justifyContent: 'center',
+    },
+    color_textPrivate: {
+        fontSize: 13,
+        fontWeight: '400',
+        // fontFamily: 'Lato-Regular',
+        color: 'grey',
     },
 });
