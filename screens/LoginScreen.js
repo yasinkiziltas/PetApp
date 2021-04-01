@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { TouchableOpacity, View, Image, Text, StyleSheet, Dimensions, Platform } from 'react-native'
 import FormInput from '../components/FormInput'
 import FormButton from '../components/FormButton'
+import { AuthContext } from '../navigation/AuthProvider'
 
 import Feather from 'react-native-vector-icons/Feather'
 import * as Animatable from 'react-native-animatable';
@@ -9,7 +10,7 @@ import * as Animatable from 'react-native-animatable';
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-
+    const { login } = useContext(AuthContext)
     return (
         <View style={styles.container}>
             <Animatable.View
@@ -59,7 +60,7 @@ export default function LoginScreen({ navigation }) {
 
                 <FormButton
                     buttonTitle="Giriş"
-                    onPress={() => { }}
+                    onPress={() => login(email, password)}
                 />
 
                 <TouchableOpacity style={styles.otherButtons} onPress={() => navigation.navigate('Signup')}>

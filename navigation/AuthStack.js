@@ -7,6 +7,7 @@ import SplashScreen from '../screens/SplashScreen';
 
 import { createStackNavigator } from '@react-navigation/stack'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import HomeScreen from '../screens/HomeScreen';
 
 
 const AppStack = createStackNavigator();
@@ -33,7 +34,7 @@ export default function AuthStack() {
         routeName = 'Onboarding'
     }
     else {
-        routeName = 'Onboarding'
+        routeName = 'Login'
     }
 
 
@@ -42,7 +43,7 @@ export default function AuthStack() {
             <AppStack.Screen name="Onboarding" component={OnboardingScreen} options={{ header: () => null }} />
             <AppStack.Screen name="Login" component={LoginScreen} options={{ header: () => null }} />
             <AppStack.Screen name="Signup" component={SignupScreen} options={{ header: () => null }} />
-            <AppStack.Screen name="Splash" component={SplashScreen} options={{ header: () => null }} />
+            {/* <AppStack.Screen name="Splash" component={SplashScreen} options={{ header: () => null }} /> */}
         </AppStack.Navigator>
     );
 }
