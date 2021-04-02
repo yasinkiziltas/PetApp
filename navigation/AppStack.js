@@ -3,6 +3,7 @@ import { View, Text } from 'react-native'
 import HomeScreen from '../screens/HomeScreen'
 import ProfileScreen from '../screens/ProfileScreen'
 import EditProfileScreen from '../screens/EditProfileScreen';
+import AddPostScreen from '../screens/AddPostScreen';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -10,6 +11,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AppLoading from 'expo-app-loading';
+
 
 
 const Stack = createStackNavigator();
@@ -53,6 +55,13 @@ const FeedStack = ({ navigation }) => (
                         />
                     </View>
                 ),
+            }}
+        />
+        <Stack.Screen
+            name="AddPost"
+            component={AddPostScreen}
+            options={{
+                headerShown: false
             }}
         />
     </Stack.Navigator>
