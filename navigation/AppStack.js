@@ -34,28 +34,32 @@ const FeedStack = ({ navigation }) => (
             name="Pet App"
             component={HomeScreen}
             options={{
-                headerTitleAlign: 'center',
-                headerTitleStyle: {
-                    color: '#2e64e5',
-                    fontFamily: 'kufam-semi',
-                    fontSize: 18,
-                },
-                headerStyle: {
-                    shadowColor: '#fff',
-                    elevation: 0,
-                },
-                headerRight: () => (
-                    <View style={{ marginRight: 10 }}>
-                        <FontAwesome5.Button
-                            name="plus"
-                            size={22}
-                            backgroundColor="#fff"
-                            color="#2e64e5"
-                            onPress={() => navigation.navigate('AddPost')}
-                        />
-                    </View>
-                ),
+                headerShown:false
             }}
+            // options={{
+            //     headerTitleAlign: 'center',
+            //     headerTitleStyle: {
+            //         color: '#2e64e5',
+            //         fontFamily: 'kufam-semi',
+            //         fontSize: 18,
+            //     },
+            //     headerStyle: {
+            //         shadowColor: '#fff',
+            //         elevation: 0,
+            //     },
+
+            //     // headerRight: () => (
+            //     //     <View style={{ marginRight: 10 }}>
+            //     //         <FontAwesome5.Button
+            //     //             name="plus"
+            //     //             size={22}
+            //     //             backgroundColor="#fff"
+            //     //             color="#2e64e5"
+            //     //             onPress={() => navigation.navigate('AddPost')}
+            //     //         />
+            //     //     </View>
+            //     // ),
+            // }}
         />
         <Stack.Screen
             name="AddPost"
@@ -98,15 +102,15 @@ export default function AppStack() {
 
     const [dataLoaded, setDataLoaded] = React.useState(false)
 
-    if (!dataLoaded) {
-        return (
-            <AppLoading
-                onError={console.log('')}
-                startAsync={fetchFonts}
-                onFinish={() => setDataLoaded(true)}
-            />
-        )
-    }
+    // if (!dataLoaded) {
+    //     return (
+    //         <AppLoading
+    //             onError={console.log('')}
+    //             startAsync={fetchFonts}
+    //             onFinish={() => setDataLoaded(true)}
+    //         />
+    //     )
+    // }
 
     return (
         <Tab.Navigator
@@ -117,7 +121,7 @@ export default function AppStack() {
                 name="Home"
                 component={FeedStack}
                 options={({ route }) => ({
-                    tabBarLabel: 'Home',
+                    tabBarLabel: 'Anasayfa',
                     // tabBarVisible: route.state && route.state.index === 0, //eğer addpost ekranında isek tab bar gorunmıcek.
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons
@@ -133,7 +137,7 @@ export default function AppStack() {
                 name="Profile"
                 component={ProfileStack}
                 options={{
-                    // tabBarLabel: 'Home',
+                    tabBarLabel: 'Profil',
                     tabBarIcon: ({ color, size }) => (
                         <Ionicons name="person-outline" color={color} size={size} />
                     ),
