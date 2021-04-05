@@ -4,6 +4,7 @@ import HomeScreen from '../screens/HomeScreen'
 import ProfileScreen from '../screens/ProfileScreen'
 import EditProfileScreen from '../screens/EditProfileScreen';
 import AddPostScreen from '../screens/AddPostScreen';
+import AnimalDetailScreen from '../screens/AnimalDetailScreen';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -64,6 +65,14 @@ const FeedStack = ({ navigation }) => (
         <Stack.Screen
             name="AddPost"
             component={AddPostScreen}
+            options={{
+                headerShown: false
+            }}
+        />
+
+        <Stack.Screen
+            name="AnimalDetail"
+            component={AnimalDetailScreen}
             options={{
                 headerShown: false
             }}

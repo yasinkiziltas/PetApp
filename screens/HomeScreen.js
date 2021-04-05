@@ -4,7 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 export default function HomeScreen({navigation}) {
     const {container, shadow, mainAnimals, header, leftImage} = styles;
-    //animaltype, animaldata
+    //animalType, animalData
 
     const animalData = [
         {
@@ -217,7 +217,10 @@ export default function HomeScreen({navigation}) {
             return(
                 <TouchableOpacity
                 style={{marginBottom:10}}
-                onPress={() => {}}
+                onPress={() => navigation.navigate('AnimalDetail', {
+                    item,
+                    // currentLocation
+                })}
             >
 
                 <View style={{marginBottom:25}}>

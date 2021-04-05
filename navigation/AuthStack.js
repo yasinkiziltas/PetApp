@@ -35,7 +35,7 @@ export default function AuthStack() {
     }
     else {
         routeName = 'Login'
-    }
+    }          
 
 
     return (
@@ -43,7 +43,7 @@ export default function AuthStack() {
             <AppStack.Screen name="Onboarding" component={OnboardingScreen} options={{ header: () => null }} />
             <AppStack.Screen name="Login" component={LoginScreen} options={{ header: () => null }} />
             <AppStack.Screen name="Signup" component={SignupScreen} options={{ header: () => null }} />
-            {/* <AppStack.Screen name="Splash" component={SplashScreen} options={{ header: () => null }} /> */}
+            <AppStack.Screen name="Splash" component={SplashScreen} options={{ header: () => null }} />
         </AppStack.Navigator>
     );
 }
