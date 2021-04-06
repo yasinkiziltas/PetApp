@@ -71,7 +71,12 @@ export default function HomeScreen({ navigation }) {
                     name: "Tosun",
                     desc: "Tekir olan bu kedimiz 4 aylık ve acil yuvaya ihtiyacı vardır.",
                     photo: require('../assets/animals/cat1.jpg'),
-                }
+                },
+                {
+                    detailId: 2,
+                    desc: "Çok sevecendir.",
+                    photo: require('../assets/animals/cat2.jpg'),
+                },
             ]
         },
         {
@@ -81,7 +86,7 @@ export default function HomeScreen({ navigation }) {
             photo: require('../assets/animals/duman.jpg'),
             animalDetail: [
                 {
-                    detailId: 2,
+                    detailId: 3,
                     name: "Duman",
                     desc: "Scottish",
                     photo: require('../assets/animals/duman.jpg'),
@@ -96,7 +101,7 @@ export default function HomeScreen({ navigation }) {
             photo: require('../assets/animals/dog1.jpg'),
             animalDetail: [
                 {
-                    detailId: 3,
+                    detailId: 4,
                     name: "Çomar",
                     desc: "Kont",
                     photo: require('../assets/animals/dog1.jpg'),
@@ -110,7 +115,7 @@ export default function HomeScreen({ navigation }) {
             photo: require('../assets/animals/bird1.jpg'),
             animalDetail: [
                 {
-                    detailId: 4,
+                    detailId: 5,
                     name: 'Alfa',
                     desc: "Muhabbet kuşu",
                     photo: require('../assets/animals/bird1.jpg'),
