@@ -2,138 +2,132 @@ import React from 'react'
 import { View, Animated, TouchableOpacity, Text, SafeAreaView, StyleSheet, Image, FlatList } from 'react-native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default function AnimalDetailScreen({route, navigation}) {
+import { icons, COLORS, SIZES, FONTS } from '../constants'
+
+export default function AnimalDetailScreen({ route, navigation }) {
     const [animals, setAnimals] = React.useState(null)
 
     React.useEffect(() => {
-        let {item} = route.params;
+        let { item } = route.params;
         setAnimals(item)
-        
+
     })
 
-    function renderHeader(){
-        return(
-            <View style={{flexDirection:'row', backgroundColor:'lightgray'}}>
-                <TouchableOpacity 
+    function renderHeader() {
+        return (
+            <View style={{ flexDirection: 'row', paddingTop: 15, backgroundColor: COLORS.lightGray3 }}>
+                <TouchableOpacity
                     style={{
-                        marginTop:30,
-                        width:120,
-                        justifyContent: 'center',   
+                        width: 50,
+                        paddingLeft: SIZES.padding * 1,
+                        justifyContent: 'center'
                     }}
-
                     onPress={() => navigation.goBack()}
                 >
-                    <MaterialCommunityIcons style={{width:30, height:30}} name="arrow-left" size={30} />
+                    <Image
+                        source={icons.back}
+                        resizeMode="contain"
+                        style={{
+                            width: 30,
+                            height: 30
+                        }}
+                    />
                 </TouchableOpacity>
 
-                <View 
-                    style={{                
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                 >
-                     <View 
+                {/* Pet Name Section */}
+                <View
                     style={{
-                        marginTop:60,
-                        height:40,
+                        flex: 1,
                         alignItems: 'center',
-                        justifyContent: 'center',
-                        paddingHorizontal:50,
-                        borderRadius:10,
-                        
+                        justifyContent: 'center'
                     }}
-                 >
-                     <Text style={{fontWeight:'bold', fontSize:20}}>{animals?.name}</Text>
-                 </View>
-
+                >
+                    <View
+                        style={{
+                            height: 50,
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            paddingHorizontal: SIZES.padding * 3,
+                            borderRadius: SIZES.radius,
+                            backgroundColor: COLORS.lightGray1
+                        }}
+                    >
+                        <Text style={{ ...FONTS.h2 }}>{animals?.name}</Text>
+                    </View>
                 </View>
 
-                {/* <TouchableOpacity 
+                <TouchableOpacity
                     style={{
-                        marginTop:30,
-                        marginLeft:80,
-                        width:120,
-                        justifyContent: 'center',  
-                    }}                 
+                        width: 50,
+                        paddingRight: SIZES.padding * 2,
+                        justifyContent: 'center'
+                    }}
                 >
-                    <MaterialCommunityIcons style={{width:30, height:30}} name="menu-open" size={30} />
+                    <Image
+                        source={icons.list}
+                        resizeMode="contain"
+                        style={{
+                            width: 30,
+                            height: 30
+                        }}
+                    />
+                </TouchableOpacity>
 
-                </TouchableOpacity> */}
             </View>
         )
     }
 
-    function renderAnimalInfo(){
-        return (            
+    function renderAnimalInfo() {
+        return (
             <Animated.ScrollView
                 horizontal
                 pagingEnabled
                 scrollEventThrottle={16}
                 snapToAlignment="center"
                 showsHorizontalScrollIndicator={false}
-                //onScroll
-
+            //onScroll
             >
 
-                {/* photo */}
-              {
-                     animals?.animalDetail.map((item, index) => (
-                         <View
-                             key={`animalDetail-${index}`}
-                             style={{
-                                marginLeft:120,
-                                marginTop:80,
-                                width:150,
-                                height:150,
-                                alignItems:'center',                              
-                            }}
-                         >   
-                               
-                             <View>
+                {/* Detail Pet Photo */}
+                {
+                    animals?.animalDetail.map((item, index) => (
+                        <View
+                            key={`animalDetail-${index}`}
+                            style={{ alignItems: 'center' }}
+                        >
+                            <View style={{ height: SIZES.height * 0.35 }}>
                                 <Image
                                     source={item.photo}
                                     resizeMode="cover"
                                     style={{
-                                        // borderWidth:1,
-                                        borderColor:'#009387',
-                                        borderRadius:30,
-                                        width:300,
+                                        width: SIZES.width,
                                         height: "100%"
                                     }}
                                 />
-                                    
-                            </View>                                             
-                         </View>
-                     ))
+                            </View>
+                            <Text>sa</Text>
+                        </View>
+
+                    ))
                 }
-                
-                {/* Description
-                <View style={{width:50, alignItems:'center', marginTop:15, paddingHorizontal: 5}}>
-                    <Text>{item.name} - {item.desc}</Text>
-                </View> */}
-
-                 
-
             </Animated.ScrollView>
         )
     }
 
     return (
         <View>
-           <SafeAreaView style={styles.container}>
-               {renderHeader()}           
-           </SafeAreaView>
-
-           <View>
-                 {renderAnimalInfo()}
-           </View>
+            {/* style={styles.container} */}
+            <SafeAreaView>
+                {renderHeader()}
+                {renderAnimalInfo()}
+            </SafeAreaView>
         </View>
     )
 }
 
-const styles = StyleSheet.create({
-    container:{ 
-        flex:1,
-        backgroundColor:'lightgray',
-    }
-})
+// const styles = StyleSheet.create({
+//     container: {
+//         flex: 1,
+//         backgroundColor: 'lightgray',
+//     }
+// })
