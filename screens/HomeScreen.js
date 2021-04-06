@@ -154,10 +154,10 @@ export default function HomeScreen({ navigation }) {
                 </TouchableOpacity>
 
                 <View style={{ flex: 1, justfiyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ fontWeight: 'bold', marginTop: 5, fontSize: 20 }}>Pet App</Text>
+                    <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, fontSize: 20 }}>Pet App</Text>
                 </View>
 
-                <TouchableOpacity style={{ paddingTop: -7, paddingRight: 5, justifyContent: 'center' }} onPress={() => navigation.navigate('AddPost')}>
+                <TouchableOpacity style={{ marginRight: 5, justifyContent: 'center' }} onPress={() => navigation.navigate('AddPost')}>
                     <MaterialCommunityIcons
                         name="plus-circle"
                         color="black"
@@ -356,8 +356,6 @@ const styles = StyleSheet.create({
         fontSize: 30
     },
     leftImage: {
-        //justfiyContent:'center', 
-        width: 150,
         paddingLeft: 5
     }
 })
