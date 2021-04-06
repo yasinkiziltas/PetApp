@@ -64,12 +64,12 @@ export default function HomeScreen({navigation}) {
             id:1,
             name:'Tosun', 
             animals:[1],
-            desc:'Tekir',
             photo:require('../assets/animals/cat1.jpg'),         
             animalDetail: [
                {
                 detailId: 1,
-                name:"TEST",
+                name:"Tosun",
+                desc:"Tekir",
                 photo:require('../assets/animals/cat1.jpg'),
                }
             ]
@@ -78,13 +78,13 @@ export default function HomeScreen({navigation}) {
             id:2,
             name:'Duman',
             animals:[1],
-            desc:'Tekir',
             photo:require('../assets/animals/duman.jpg'),
             animalDetail: [
                 {
                  detailId: 2,
-                 name:"TEST",
-                 photo:require('../assets/animals/cat1.jpg'),
+                 name:"Duman",
+                 desc:"Scottish",
+                 photo:require('../assets/animals/duman.jpg'),
                 }
              ]
         },
@@ -93,13 +93,13 @@ export default function HomeScreen({navigation}) {
             id:3,
             name:'Çomar',
             animals:[2],
-            desc:'Sivas Kangalı',
             photo:require('../assets/animals/dog1.jpg'),
             animalDetail: [
                 {
                  detailId: 3,
-                 name:"TEST",
-                 photo:require('../assets/animals/cat1.jpg'),
+                 name:"Çomar",
+                 desc:"Kont",
+                 photo:require('../assets/animals/dog1.jpg'),
                 }
              ]
         },
@@ -107,13 +107,13 @@ export default function HomeScreen({navigation}) {
             id:4,
             name:'Alfa',
             animals:[3],
-            desc:'Muhabbet Kuşu',
             photo:require('../assets/animals/bird1.jpg'),
             animalDetail: [
                 {
                  detailId: 4,
-                 name:"TEST",
-                 photo:require('../assets/animals/cat1.jpg'),
+                 name:'Alfa',
+                 desc:"Muhabbet kuşu",
+                 photo:require('../assets/animals/bird1.jpg'),
                 }
              ]
         },

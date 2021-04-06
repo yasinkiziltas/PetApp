@@ -13,7 +13,7 @@ export default function AnimalDetailScreen({route, navigation}) {
 
     function renderHeader(){
         return(
-            <View style={{flexDirection:'row'}}>
+            <View style={{flexDirection:'row', backgroundColor:'lightgray'}}>
                 <TouchableOpacity 
                     style={{
                         marginTop:30,
@@ -40,7 +40,7 @@ export default function AnimalDetailScreen({route, navigation}) {
                         justifyContent: 'center',
                         paddingHorizontal:50,
                         borderRadius:10,
-                        backgroundColor:'lightgray'
+                        
                     }}
                  >
                      <Text style={{fontWeight:'bold', fontSize:20}}>{animals?.name}</Text>
@@ -48,7 +48,7 @@ export default function AnimalDetailScreen({route, navigation}) {
 
                 </View>
 
-                <TouchableOpacity 
+                {/* <TouchableOpacity 
                     style={{
                         marginTop:30,
                         marginLeft:80,
@@ -58,7 +58,7 @@ export default function AnimalDetailScreen({route, navigation}) {
                 >
                     <MaterialCommunityIcons style={{width:30, height:30}} name="menu-open" size={30} />
 
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         )
     }
@@ -75,6 +75,7 @@ export default function AnimalDetailScreen({route, navigation}) {
 
             >
 
+                {/* photo */}
               {
                      animals?.animalDetail.map((item, index) => (
                          <View
@@ -87,21 +88,29 @@ export default function AnimalDetailScreen({route, navigation}) {
                                 alignItems:'center',                              
                             }}
                          >   
+                               
                              <View>
                                 <Image
                                     source={item.photo}
                                     resizeMode="cover"
                                     style={{
-                                        borderRadius:15,
-                                        width: 100,
+                                        // borderWidth:1,
+                                        borderColor:'#009387',
+                                        borderRadius:30,
+                                        width:300,
                                         height: "100%"
                                     }}
                                 />
-
-                            </View>
+                                    
+                            </View>                                             
                          </View>
                      ))
                 }
+                
+                {/* Description
+                <View style={{width:50, alignItems:'center', marginTop:15, paddingHorizontal: 5}}>
+                    <Text>{item.name} - {item.desc}</Text>
+                </View> */}
 
                  
 
