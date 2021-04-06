@@ -153,7 +153,7 @@ export default function HomeScreen({ navigation }) {
                     />
                 </TouchableOpacity>
 
-                <View style={{ flex: 1, justfiyContent: 'center', alignItems: 'center ' }}>
+                <View style={{ flex: 1, justfiyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontWeight: 'bold', marginTop: 5, fontSize: 20 }}>Pet App</Text>
                 </View>
 

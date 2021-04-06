@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Animated, TouchableOpacity, Text, SafeAreaView, StyleSheet, Image, FlatList } from 'react-native'
+import { View, Animated, TouchableOpacity, Text, SafeAreaView, Image } from 'react-native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { icons, COLORS, SIZES, FONTS } from '../constants'
