@@ -62,17 +62,31 @@ export default function HomeScreen({navigation}) {
     const catData = [
         {
             id:1,
-            name:'Tosun',
+            name:'Tosun', 
             animals:[1],
             desc:'Tekir',
-            photo:require('../assets/animals/cat1.jpg')
+            photo:require('../assets/animals/cat1.jpg'),         
+            animalDetail: [
+               {
+                detailId: 1,
+                name:"TEST",
+                photo:require('../assets/animals/cat1.jpg'),
+               }
+            ]
         },
         {
             id:2,
             name:'Duman',
             animals:[1],
             desc:'Tekir',
-            photo:require('../assets/animals/duman.jpg')
+            photo:require('../assets/animals/duman.jpg'),
+            animalDetail: [
+                {
+                 detailId: 2,
+                 name:"TEST",
+                 photo:require('../assets/animals/cat1.jpg'),
+                }
+             ]
         },
 
         {
@@ -80,14 +94,28 @@ export default function HomeScreen({navigation}) {
             name:'Çomar',
             animals:[2],
             desc:'Sivas Kangalı',
-            photo:require('../assets/animals/dog1.jpg')
+            photo:require('../assets/animals/dog1.jpg'),
+            animalDetail: [
+                {
+                 detailId: 3,
+                 name:"TEST",
+                 photo:require('../assets/animals/cat1.jpg'),
+                }
+             ]
         },
         {
             id:4,
             name:'Alfa',
             animals:[3],
             desc:'Muhabbet Kuşu',
-            photo:require('../assets/animals/bird1.jpg')
+            photo:require('../assets/animals/bird1.jpg'),
+            animalDetail: [
+                {
+                 detailId: 4,
+                 name:"TEST",
+                 photo:require('../assets/animals/cat1.jpg'),
+                }
+             ]
         },
         
     ]
@@ -218,7 +246,7 @@ export default function HomeScreen({navigation}) {
                 <TouchableOpacity
                 style={{marginBottom:10}}
                 onPress={() => navigation.navigate('AnimalDetail', {
-                    item,
+                    item
                     // currentLocation
                 })}
             >
