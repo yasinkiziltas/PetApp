@@ -69,7 +69,7 @@ export default function HomeScreen({ navigation }) {
                 {
                     detailId: 1,
                     name: "Tosun",
-                    desc: "Tekir",
+                    desc: "Tekir olan bu kedimiz 4 aylık ve acil yuvaya ihtiyacı vardır.",
                     photo: require('../assets/animals/cat1.jpg'),
                 }
             ]

@@ -103,7 +103,8 @@ export default function AnimalDetailScreen({ route, navigation }) {
                                     }}
                                 />
                             </View>
-                            <Text>sa</Text>
+                            <Text style={{ marginVertical: 10, textAlign: 'center', ...FONTS.h2 }}>{item.name}</Text>
+                            <Text style={{ marginVertical: 10, textAlign: 'center', ...FONTS.body3 }}>{item.desc}</Text>
                         </View>
 
                     ))
