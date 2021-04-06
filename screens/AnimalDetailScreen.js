@@ -116,7 +116,6 @@ export default function AnimalDetailScreen({ route, navigation }) {
 
     return (
         <View>
-            {/* style={styles.container} */}
             <SafeAreaView>
                 {renderHeader()}
                 {renderAnimalInfo()}
@@ -124,10 +123,3 @@ export default function AnimalDetailScreen({ route, navigation }) {
         </View>
     )
 }
-
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         backgroundColor: 'lightgray',
-//     }
-// })
