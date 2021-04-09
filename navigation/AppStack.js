@@ -5,6 +5,7 @@ import ProfileScreen from '../screens/ProfileScreen'
 import EditProfileScreen from '../screens/EditProfileScreen';
 import AddPostScreen from '../screens/AddPostScreen';
 import AnimalDetailScreen from '../screens/AnimalDetailScreen';
+import ContactPerson from '../screens/ContactPerson';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -35,32 +36,32 @@ const FeedStack = ({ navigation }) => (
             name="Pet App"
             component={HomeScreen}
             options={{
-                headerShown:false
+                headerShown: false
             }}
-            // options={{
-            //     headerTitleAlign: 'center',
-            //     headerTitleStyle: {
-            //         color: '#2e64e5',
-            //         fontFamily: 'kufam-semi',
-            //         fontSize: 18,
-            //     },
-            //     headerStyle: {
-            //         shadowColor: '#fff',
-            //         elevation: 0,
-            //     },
+        // options={{
+        //     headerTitleAlign: 'center',
+        //     headerTitleStyle: {
+        //         color: '#2e64e5',
+        //         fontFamily: 'kufam-semi',
+        //         fontSize: 18,
+        //     },
+        //     headerStyle: {
+        //         shadowColor: '#fff',
+        //         elevation: 0,
+        //     },
 
-            //     // headerRight: () => (
-            //     //     <View style={{ marginRight: 10 }}>
-            //     //         <FontAwesome5.Button
-            //     //             name="plus"
-            //     //             size={22}
-            //     //             backgroundColor="#fff"
-            //     //             color="#2e64e5"
-            //     //             onPress={() => navigation.navigate('AddPost')}
-            //     //         />
-            //     //     </View>
-            //     // ),
-            // }}
+        //     // headerRight: () => (
+        //     //     <View style={{ marginRight: 10 }}>
+        //     //         <FontAwesome5.Button
+        //     //             name="plus"
+        //     //             size={22}
+        //     //             backgroundColor="#fff"
+        //     //             color="#2e64e5"
+        //     //             onPress={() => navigation.navigate('AddPost')}
+        //     //         />
+        //     //     </View>
+        //     // ),
+        // }}
         />
         <Stack.Screen
             name="AddPost"
@@ -73,6 +74,14 @@ const FeedStack = ({ navigation }) => (
         <Stack.Screen
             name="AnimalDetail"
             component={AnimalDetailScreen}
+            options={{
+                headerShown: false
+            }}
+        />
+
+        <Stack.Screen
+            name="ContactPerson"
+            component={ContactPerson}
             options={{
                 headerShown: false
             }}

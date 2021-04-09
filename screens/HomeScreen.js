@@ -1,10 +1,19 @@
 import React from 'react'
 import { View, TouchableOpacity, Text, SafeAreaView, StyleSheet, Image, FlatList } from 'react-native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { images } from '../constants';
 
 export default function HomeScreen({ navigation }) {
     const { container, shadow, mainAnimals, header, leftImage } = styles;
     //animalType, animalData
+
+    const initialCurrentLocation = {
+        streetName: "Kuching",
+        gps: {
+            latitude: 1.5496614931250685,
+            longitude: 110.36381866919922
+        }
+    }
 
     const animalData = [
         {
@@ -65,6 +74,14 @@ export default function HomeScreen({ navigation }) {
             name: 'Tosun',
             animals: [1],
             photo: require('../assets/animals/cat1.jpg'),
+            location: {
+                latitude: 1.5347282806345879,
+                longitude: 110.35632207358996,
+            },
+            possessive: {
+                name: "Yasin",
+                avatar: images.avatar_1,
+            },
             animalDetail: [
                 {
                     detailId: 1,
@@ -84,6 +101,14 @@ export default function HomeScreen({ navigation }) {
             name: 'Duman',
             animals: [1],
             photo: require('../assets/animals/duman.jpg'),
+            location: {
+                latitude: 1.556306570595712,
+                longitude: 110.35504616746915,
+            },
+            possessive: {
+                name: "Sahin",
+                avatar: images.avatar_2,
+            },
             animalDetail: [
                 {
                     detailId: 3,
@@ -99,6 +124,14 @@ export default function HomeScreen({ navigation }) {
             name: 'Çomar',
             animals: [2],
             photo: require('../assets/animals/dog1.jpg'),
+            location: {
+                latitude: 1.5238753474714375,
+                longitude: 110.34261833833622,
+            },
+            possessive: {
+                name: "Osman",
+                avatar: images.avatar_3,
+            },
             animalDetail: [
                 {
                     detailId: 4,
@@ -113,6 +146,14 @@ export default function HomeScreen({ navigation }) {
             name: 'Alfa',
             animals: [3],
             photo: require('../assets/animals/bird1.jpg'),
+            location: {
+                latitude: 1.5578068150528928,
+                longitude: 110.35482523764315,
+            },
+            possessive: {
+                name: "Mehmet",
+                avatar: images.avatar_4,
+            },
             animalDetail: [
                 {
                     detailId: 5,
@@ -126,6 +167,7 @@ export default function HomeScreen({ navigation }) {
     ]
 
     const [animals, setAnimals] = React.useState(animalData)
+    const [currentLocation, setCurrentLocation] = React.useState(initialCurrentLocation)
     const [selectedCategory, setSelectedCategory] = React.useState(null)
     const [cats, setCats] = React.useState(catData)
 
@@ -251,8 +293,8 @@ export default function HomeScreen({ navigation }) {
                 <TouchableOpacity
                     style={{ marginBottom: 10 }}
                     onPress={() => navigation.navigate('AnimalDetail', {
-                        item
-                        // currentLocation
+                        item,
+                        currentLocation
                     })}
                 >
 

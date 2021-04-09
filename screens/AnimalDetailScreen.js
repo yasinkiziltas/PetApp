@@ -1,14 +1,16 @@
 import React from 'react'
-import { View, Animated, TouchableOpacity, Text, SafeAreaView, Image } from 'react-native'
+import { View, Animated, TouchableOpacity, Text, SafeAreaView, Image, StyleSheet } from 'react-native'
 import { icons, COLORS, SIZES, FONTS } from '../constants'
 
 export default function AnimalDetailScreen({ route, navigation }) {
     const [animals, setAnimals] = React.useState(null)
+    const [currentLocation, setCurrentLocation] = React.useState(null)
     const scrollX = new Animated.Value(0)
 
     React.useEffect(() => {
-        let { item } = route.params;
+        let { item, currentLocation } = route.params;
         setAnimals(item)
+        setCurrentLocation(currentLocation)
 
     })
 
@@ -171,9 +173,91 @@ export default function AnimalDetailScreen({ route, navigation }) {
                 {
                     renderDots()
                 }
-                <View>
+                <View
+                    style={{
 
+                        backgroundColor: COLORS.white,
+                        borderTopLeftRadius: 40,
+                        borderTopRightRadius: 40
+                    }}
+                >
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                            paddingVertical: SIZES.padding * 2,
+                            paddingHorizontal: SIZES.padding * 3,
+                            borderBottomColor: COLORS.lightGray2,
+                            borderBottomWidth: 1
+                        }}
+                    >
+                        <Text style={{ ...FONTS.h2 }}>Açıklama</Text>
+                        {/* <Text style={{ ...FONTS.h3 }}>SA</Text> */}
+                    </View>
+
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                            paddingVertical: SIZES.padding * 2,
+                            paddingHorizontal: SIZES.padding * 3
+                        }}
+                    >
+                        <View style={{ flexDirection: 'row' }}>
+                            <Image
+                                source={icons.pin}
+                                resizeMode="contain"
+                                style={{
+                                    width: 20,
+                                    height: 20,
+                                    tintColor: COLORS.darkgray
+                                }}
+                            />
+                            <Text style={{ marginLeft: SIZES.padding, ...FONTS.h4 }}>Konum</Text>
+                        </View>
+
+                        <View style={{ flexDirection: 'row' }}>
+                            <Image
+                                source={icons.master_card}
+                                resizeMode="contain"
+                                style={{
+                                    width: 20,
+                                    height: 20,
+                                    tintColor: COLORS.darkgray
+                                }}
+                            />
+                            <Text style={{ marginLeft: SIZES.padding, ...FONTS.h4 }}>8888</Text>
+                        </View>
+                    </View>
+
+                    {/* İletişime Geç Butonu */}
+                    <View
+                        style={{
+                            padding: SIZES.padding * 2,
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}
+                    >
+                        <TouchableOpacity
+                            style={{
+                                width: SIZES.width * 0.9,
+                                padding: SIZES.padding,
+                                backgroundColor: COLORS.primary,
+                                alignItems: 'center',
+                                borderRadius: SIZES.radius
+                            }}
+                            onPress={() => navigation.navigate("ContactPerson", {
+                                animals: animals,
+                                currentLocation: currentLocation
+                            })}
+
+                        >
+                            <Text style={{ color: COLORS.white, ...FONTS.h2 }}>İletişime Geç</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
+
+
             </View>
         )
     }
@@ -188,3 +272,4 @@ export default function AnimalDetailScreen({ route, navigation }) {
         </View>
     )
 }
+
