@@ -175,7 +175,6 @@ export default function AnimalDetailScreen({ route, navigation }) {
                 }
                 <View
                     style={{
-
                         backgroundColor: COLORS.white,
                         borderTopLeftRadius: 40,
                         borderTopRightRadius: 40
@@ -183,7 +182,7 @@ export default function AnimalDetailScreen({ route, navigation }) {
                 >
                     <View
                         style={{
-                            height: 135,
+                            // height: 135,
                             flexDirection: 'row',
                             justifyContent: 'space-between',
                             paddingVertical: SIZES.padding * 2,
